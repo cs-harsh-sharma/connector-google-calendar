@@ -23,6 +23,11 @@ def api_request(method, endpoint, connector_info, config, params=None, data=None
         headers['Authorization'] = token
         headers['Content-Type'] = 'application/json'
         response = request(method, endpoint, headers=headers, params=params, data=data, verify=go.verify_ssl)
+        try:
+            from connectors.debug_utils.curl_script import make_curl
+            make_curl(method, endpoint, headers=headers, params=params, data=data, verify_ssl=go.verify_ssl)
+        except Exception as err:
+            logger.error(f"Error in curl utils: {str(err)}")
         if response.ok or response.status_code == 204:
             if 'json' in str(response.headers):
                 return response.json()
