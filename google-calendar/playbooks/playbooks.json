@@ -1,0 +1,460 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "uuid": "a2147dd3-2cc4-4f96-8986-32000efc6c57",
+      "@type": "WorkflowCollection",
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "uuid": "e4f12912-5af6-4edf-b0d6-a8c885889703",
+          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "steps": [
+            {
+              "uuid": "dbdc828b-8c5b-4f08-9273-a8e09303d588",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "0521c28a-d499-44ac-9dd0-5ece2cceb317",
+              "@type": "WorkflowStep",
+              "name": "Get All CalendarList",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Calendar",
+                "config": "",
+                "params": {
+                  "minAccessRole": "",
+                  "showDeleted": "",
+                  "showHidden": "",
+                  "maxResults": 100,
+                  "pageToken": "",
+                  "syncToken": ""
+                },
+                "version": "1.0.0",
+                "connector": "google-calendar",
+                "operation": "get_calendar_list",
+                "operationTitle": "Get All CalendarList"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves the calendars on the user's calendar list from Google Calendar based on the input parameters you have specified.",
+          "name": "Get All CalendarList",
+          "tag": "#Google Calendar",
+          "recordTags": [
+            "Google",
+            "google-calendar"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/dbdc828b-8c5b-4f08-9273-a8e09303d588",
+          "routes": [
+            {
+              "uuid": "9bb9f528-e047-41c6-93f7-2bc65025772d",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All CalendarList",
+              "sourceStep": "/api/3/workflow_steps/dbdc828b-8c5b-4f08-9273-a8e09303d588",
+              "targetStep": "/api/3/workflow_steps/0521c28a-d499-44ac-9dd0-5ece2cceb317"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "38e33d96-794c-4521-9589-c033e604e795",
+          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "steps": [
+            {
+              "uuid": "c0487c2e-33a2-4a54-9617-64bf77f9bc67",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "b36b3550-3dd0-4841-8362-e4a1e0d3275a",
+              "@type": "WorkflowStep",
+              "name": "Get CalendarList Details",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Calendar",
+                "config": "",
+                "params": {
+                  "calendar_id": ""
+                },
+                "version": "1.0.0",
+                "connector": "google-calendar",
+                "operation": "get_calendar_list_details",
+                "operationTitle": "Get CalendarList Details"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
+          "name": "Get CalendarList Details",
+          "tag": "#Google Calendar",
+          "recordTags": [
+            "Google",
+            "google-calendar"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/c0487c2e-33a2-4a54-9617-64bf77f9bc67",
+          "routes": [
+            {
+              "uuid": "090ea4cc-e1cd-4a5c-b506-a730d2c7ba1d",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get CalendarList Details",
+              "sourceStep": "/api/3/workflow_steps/c0487c2e-33a2-4a54-9617-64bf77f9bc67",
+              "targetStep": "/api/3/workflow_steps/b36b3550-3dd0-4841-8362-e4a1e0d3275a"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "d93f7512-3d7e-4c56-ac60-7c542ea1b0dc",
+          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "steps": [
+            {
+              "uuid": "886a7f12-b402-4dfe-a9c4-08ebb689aec3",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "17c588b2-9dc8-40eb-bb24-2a75341f26e0",
+              "@type": "WorkflowStep",
+              "name": "Get Calendar Access Control List",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Calendar",
+                "config": "",
+                "params": {
+                  "calendar_id": "",
+                  "showDeleted": "",
+                  "maxResults": 100,
+                  "pageToken": "",
+                  "syncToken": ""
+                },
+                "version": "1.0.0",
+                "connector": "google-calendar",
+                "operation": "get_calendar_access_control_list",
+                "operationTitle": "Get Calendar Access Control List"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves the rules in the access control list for the calendar from Google Calendar based on the calendar ID and other input parameters that you have specified.",
+          "name": "Get Calendar Access Control List",
+          "tag": "#Google Calendar",
+          "recordTags": [
+            "Google",
+            "google-calendar"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/886a7f12-b402-4dfe-a9c4-08ebb689aec3",
+          "routes": [
+            {
+              "uuid": "3fda1d07-fe2c-4e99-b763-a9977ed2618c",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Calendar Access Control List",
+              "sourceStep": "/api/3/workflow_steps/886a7f12-b402-4dfe-a9c4-08ebb689aec3",
+              "targetStep": "/api/3/workflow_steps/17c588b2-9dc8-40eb-bb24-2a75341f26e0"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "0424d1df-456d-4a1f-a2a6-b26159a9f53c",
+          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "steps": [
+            {
+              "uuid": "cd2db47b-0cb6-47f8-a119-9ad3824ec1ef",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "4eb484a1-815b-437b-800e-e96a5001e7f4",
+              "@type": "WorkflowStep",
+              "name": "Get Access Control Rule Details",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Calendar",
+                "config": "",
+                "params": {
+                  "calendar_id": "",
+                  "rule_id": ""
+                },
+                "version": "1.0.0",
+                "connector": "google-calendar",
+                "operation": "get_access_control_rule_details",
+                "operationTitle": "Get Access Control Rule Details"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves an access control rule from Google Calendar based on the calendar ID and rule ID you have specified.",
+          "name": "Get Access Control Rule Details",
+          "tag": "#Google Calendar",
+          "recordTags": [
+            "Google",
+            "google-calendar"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/cd2db47b-0cb6-47f8-a119-9ad3824ec1ef",
+          "routes": [
+            {
+              "uuid": "9e85d97b-cf75-4565-adf7-fcbbf3e35787",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Access Control Rule Details",
+              "sourceStep": "/api/3/workflow_steps/cd2db47b-0cb6-47f8-a119-9ad3824ec1ef",
+              "targetStep": "/api/3/workflow_steps/4eb484a1-815b-437b-800e-e96a5001e7f4"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "b65044a9-be8b-4110-978b-7baf42f77da0",
+          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "steps": [
+            {
+              "uuid": "9599feca-49e9-4ff3-b70e-a010978e317d",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "217d870d-3dc0-4110-a8fa-8b6f68999ec3",
+              "@type": "WorkflowStep",
+              "name": "Get Events List",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Calendar",
+                "config": "",
+                "params": {
+                  "calendar_id": "",
+                  "eventTypes": "",
+                  "timeMax": "",
+                  "timeMin": "",
+                  "updatedMin": "",
+                  "orderBy": "",
+                  "maxAttendees": "",
+                  "maxResults": 250,
+                  "pageToken": "",
+                  "additional_parameters": ""
+                },
+                "version": "1.0.0",
+                "connector": "google-calendar",
+                "operation": "get_events_list",
+                "operationTitle": "Get Events List"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves the list of events on the specified calendar from Google Calendar based on the calendar ID and other input parameters you have specified.",
+          "name": "Get Events List",
+          "tag": "#Google Calendar",
+          "recordTags": [
+            "Google",
+            "google-calendar"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/9599feca-49e9-4ff3-b70e-a010978e317d",
+          "routes": [
+            {
+              "uuid": "2ae7cb42-0c8c-4197-9a2c-e6d8f7ad2a85",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Events List",
+              "sourceStep": "/api/3/workflow_steps/9599feca-49e9-4ff3-b70e-a010978e317d",
+              "targetStep": "/api/3/workflow_steps/217d870d-3dc0-4110-a8fa-8b6f68999ec3"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "62d88cf3-b2c2-4441-9814-2e515119bbc5",
+          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "steps": [
+            {
+              "uuid": "cc7ae797-5c67-4b7b-8ccd-81c248b78f97",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "fbc426cc-001a-4878-8bae-24b4b1ddbb93",
+              "@type": "WorkflowStep",
+              "name": "Get Event Details",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Calendar",
+                "config": "",
+                "params": {
+                  "calendar_id": "",
+                  "event_id": "",
+                  "maxAttendees": "",
+                  "timeZone": ""
+                },
+                "version": "1.0.0",
+                "connector": "google-calendar",
+                "operation": "get_event_details",
+                "operationTitle": "Get Event Details"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves an event details based on the calendar ID, event ID and other input parameters that you have specified.",
+          "name": "Get Event Details",
+          "tag": "#Google Calendar",
+          "recordTags": [
+            "Google",
+            "google-calendar"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/cc7ae797-5c67-4b7b-8ccd-81c248b78f97",
+          "routes": [
+            {
+              "uuid": "2d9fa3d3-a7f1-44aa-8f92-64dd17fa86ff",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Event Details",
+              "sourceStep": "/api/3/workflow_steps/cc7ae797-5c67-4b7b-8ccd-81c248b78f97",
+              "targetStep": "/api/3/workflow_steps/fbc426cc-001a-4878-8bae-24b4b1ddbb93"
+            }
+          ]
+        }
+      ],
+      "name": "Sample - Google Calendar - 1.0.0",
+      "description": "Google Calendar is a web-based calendar service developed by Google, allowing users to organize their schedules, appointments, and events seamlessly. It offers a range of features designed to help users manage their time effectively, collaborate with others, and stay organized across various devices.",
+      "visible": true,
+      "recordTags": [
+        "Google",
+        "google-calendar"
+      ]
+    }
+  ]
+}
