@@ -2,16 +2,16 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "a2147dd3-2cc4-4f96-8986-32000efc6c57",
+      "uuid": "9f3e2809-d263-495d-aa66-80404cf0b839",
       "@type": "WorkflowCollection",
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "e4f12912-5af6-4edf-b0d6-a8c885889703",
-          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "uuid": "65983ee2-f0af-48bb-adc7-6ce5e0b352c8",
+          "collection": "/api/3/workflow_collections/9f3e2809-d263-495d-aa66-80404cf0b839",
           "steps": [
             {
-              "uuid": "dbdc828b-8c5b-4f08-9273-a8e09303d588",
+              "uuid": "5675e03c-4d4a-4a6f-bec4-b88c4490e401",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -28,7 +28,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "0521c28a-d499-44ac-9dd0-5ece2cceb317",
+              "uuid": "01907719-ea12-4c07-8ece-44f1de6046ac",
               "@type": "WorkflowStep",
               "name": "Get All CalendarList",
               "description": null,
@@ -67,26 +67,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/dbdc828b-8c5b-4f08-9273-a8e09303d588",
+          "triggerStep": "/api/3/workflow_steps/5675e03c-4d4a-4a6f-bec4-b88c4490e401",
           "routes": [
             {
-              "uuid": "9bb9f528-e047-41c6-93f7-2bc65025772d",
+              "uuid": "9af27478-a5d1-4f37-b831-f23efca8761d",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get All CalendarList",
-              "sourceStep": "/api/3/workflow_steps/dbdc828b-8c5b-4f08-9273-a8e09303d588",
-              "targetStep": "/api/3/workflow_steps/0521c28a-d499-44ac-9dd0-5ece2cceb317"
+              "sourceStep": "/api/3/workflow_steps/5675e03c-4d4a-4a6f-bec4-b88c4490e401",
+              "targetStep": "/api/3/workflow_steps/01907719-ea12-4c07-8ece-44f1de6046ac"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "38e33d96-794c-4521-9589-c033e604e795",
-          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "uuid": "7652a340-4555-4b3e-8c5b-e19efe15af47",
+          "collection": "/api/3/workflow_collections/9f3e2809-d263-495d-aa66-80404cf0b839",
           "steps": [
             {
-              "uuid": "c0487c2e-33a2-4a54-9617-64bf77f9bc67",
+              "uuid": "60505d8a-2376-42a1-9ae2-1cf8e03b256f",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -103,7 +103,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "b36b3550-3dd0-4841-8362-e4a1e0d3275a",
+              "uuid": "e914fb02-3ed8-4495-8d44-c2716bca4cc8",
               "@type": "WorkflowStep",
               "name": "Get CalendarList Details",
               "description": null,
@@ -137,26 +137,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/c0487c2e-33a2-4a54-9617-64bf77f9bc67",
+          "triggerStep": "/api/3/workflow_steps/60505d8a-2376-42a1-9ae2-1cf8e03b256f",
           "routes": [
             {
-              "uuid": "090ea4cc-e1cd-4a5c-b506-a730d2c7ba1d",
+              "uuid": "1f9302f9-67f5-4077-a1ee-a0f9e0d5732d",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get CalendarList Details",
-              "sourceStep": "/api/3/workflow_steps/c0487c2e-33a2-4a54-9617-64bf77f9bc67",
-              "targetStep": "/api/3/workflow_steps/b36b3550-3dd0-4841-8362-e4a1e0d3275a"
+              "sourceStep": "/api/3/workflow_steps/60505d8a-2376-42a1-9ae2-1cf8e03b256f",
+              "targetStep": "/api/3/workflow_steps/e914fb02-3ed8-4495-8d44-c2716bca4cc8"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "d93f7512-3d7e-4c56-ac60-7c542ea1b0dc",
-          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "uuid": "6f33c4fe-6bec-40d7-90c2-b4a2da7c4e11",
+          "collection": "/api/3/workflow_collections/9f3e2809-d263-495d-aa66-80404cf0b839",
           "steps": [
             {
-              "uuid": "886a7f12-b402-4dfe-a9c4-08ebb689aec3",
+              "uuid": "d1da1328-b555-4c20-a86e-09f506fda983",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -173,7 +173,77 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "17c588b2-9dc8-40eb-bb24-2a75341f26e0",
+              "uuid": "6f6bba94-1693-4c08-aa89-02779a341c38",
+              "@type": "WorkflowStep",
+              "name": "Delete CalendarList",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Calendar",
+                "config": "",
+                "params": {
+                  "calendar_id": ""
+                },
+                "version": "1.0.0",
+                "connector": "google-calendar",
+                "operation": "delete_calendar_list",
+                "operationTitle": "Delete CalendarList"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Removes a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
+          "name": "Delete CalendarList",
+          "tag": "#Google Calendar",
+          "recordTags": [
+            "Google",
+            "google-calendar"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/d1da1328-b555-4c20-a86e-09f506fda983",
+          "routes": [
+            {
+              "uuid": "046c4162-8e6f-4b7f-8a6c-e95f90025061",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Delete CalendarList",
+              "sourceStep": "/api/3/workflow_steps/d1da1328-b555-4c20-a86e-09f506fda983",
+              "targetStep": "/api/3/workflow_steps/6f6bba94-1693-4c08-aa89-02779a341c38"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "4579b59a-c9fc-4e38-8d3a-d64e11550630",
+          "collection": "/api/3/workflow_collections/9f3e2809-d263-495d-aa66-80404cf0b839",
+          "steps": [
+            {
+              "uuid": "475071db-d173-4fc4-b4a1-9a311ae0f9c9",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "2f09a3ef-5e31-4286-b8f4-dd0b2f051045",
               "@type": "WorkflowStep",
               "name": "Get Calendar Access Control List",
               "description": null,
@@ -211,26 +281,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/886a7f12-b402-4dfe-a9c4-08ebb689aec3",
+          "triggerStep": "/api/3/workflow_steps/475071db-d173-4fc4-b4a1-9a311ae0f9c9",
           "routes": [
             {
-              "uuid": "3fda1d07-fe2c-4e99-b763-a9977ed2618c",
+              "uuid": "7da7cb0b-b71b-4a5c-aca4-56e65e1ec58c",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Calendar Access Control List",
-              "sourceStep": "/api/3/workflow_steps/886a7f12-b402-4dfe-a9c4-08ebb689aec3",
-              "targetStep": "/api/3/workflow_steps/17c588b2-9dc8-40eb-bb24-2a75341f26e0"
+              "sourceStep": "/api/3/workflow_steps/475071db-d173-4fc4-b4a1-9a311ae0f9c9",
+              "targetStep": "/api/3/workflow_steps/2f09a3ef-5e31-4286-b8f4-dd0b2f051045"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "0424d1df-456d-4a1f-a2a6-b26159a9f53c",
-          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "uuid": "bee9af1b-2278-4d53-9c67-9fa15cca42c7",
+          "collection": "/api/3/workflow_collections/9f3e2809-d263-495d-aa66-80404cf0b839",
           "steps": [
             {
-              "uuid": "cd2db47b-0cb6-47f8-a119-9ad3824ec1ef",
+              "uuid": "3e38add8-045f-4b50-b8c1-e4d21c9333e5",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -247,7 +317,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "4eb484a1-815b-437b-800e-e96a5001e7f4",
+              "uuid": "dfc8a72a-6f98-4cf4-a162-a208fed73f7c",
               "@type": "WorkflowStep",
               "name": "Get Access Control Rule Details",
               "description": null,
@@ -282,26 +352,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/cd2db47b-0cb6-47f8-a119-9ad3824ec1ef",
+          "triggerStep": "/api/3/workflow_steps/3e38add8-045f-4b50-b8c1-e4d21c9333e5",
           "routes": [
             {
-              "uuid": "9e85d97b-cf75-4565-adf7-fcbbf3e35787",
+              "uuid": "69824fc0-41cf-4013-bb80-b1e3f42a17d7",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Access Control Rule Details",
-              "sourceStep": "/api/3/workflow_steps/cd2db47b-0cb6-47f8-a119-9ad3824ec1ef",
-              "targetStep": "/api/3/workflow_steps/4eb484a1-815b-437b-800e-e96a5001e7f4"
+              "sourceStep": "/api/3/workflow_steps/3e38add8-045f-4b50-b8c1-e4d21c9333e5",
+              "targetStep": "/api/3/workflow_steps/dfc8a72a-6f98-4cf4-a162-a208fed73f7c"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "b65044a9-be8b-4110-978b-7baf42f77da0",
-          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "uuid": "ba83deca-71aa-4c88-95bb-215363e69973",
+          "collection": "/api/3/workflow_collections/9f3e2809-d263-495d-aa66-80404cf0b839",
           "steps": [
             {
-              "uuid": "9599feca-49e9-4ff3-b70e-a010978e317d",
+              "uuid": "ae01734a-d3e2-4227-8fcc-aec96299f616",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -318,7 +388,78 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "217d870d-3dc0-4110-a8fa-8b6f68999ec3",
+              "uuid": "18f3b2f7-bb14-4ec2-a79d-5f60c91dd78a",
+              "@type": "WorkflowStep",
+              "name": "Delete Access Control Rule",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Calendar",
+                "config": "",
+                "params": {
+                  "calendar_id": "",
+                  "rule_id": ""
+                },
+                "version": "1.0.0",
+                "connector": "google-calendar",
+                "operation": "delete_access_control_rule",
+                "operationTitle": "Delete Access Control Rule"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Deletes an access control rule from Google Calendar based on the calendar ID and rule ID you have specified.",
+          "name": "Delete Access Control Rule",
+          "tag": "#Google Calendar",
+          "recordTags": [
+            "Google",
+            "google-calendar"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/ae01734a-d3e2-4227-8fcc-aec96299f616",
+          "routes": [
+            {
+              "uuid": "e2fc207e-fe30-464f-9432-573a2aa3e3c3",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Delete Access Control Rule",
+              "sourceStep": "/api/3/workflow_steps/ae01734a-d3e2-4227-8fcc-aec96299f616",
+              "targetStep": "/api/3/workflow_steps/18f3b2f7-bb14-4ec2-a79d-5f60c91dd78a"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "37ec14cd-ddda-4b6b-a094-4b9628bd9a89",
+          "collection": "/api/3/workflow_collections/9f3e2809-d263-495d-aa66-80404cf0b839",
+          "steps": [
+            {
+              "uuid": "b7729a67-afda-4d1e-b40d-974cec9da517",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "5d2e0309-619b-4d08-86fc-80ee6c58b044",
               "@type": "WorkflowStep",
               "name": "Get Events List",
               "description": null,
@@ -361,26 +502,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/9599feca-49e9-4ff3-b70e-a010978e317d",
+          "triggerStep": "/api/3/workflow_steps/b7729a67-afda-4d1e-b40d-974cec9da517",
           "routes": [
             {
-              "uuid": "2ae7cb42-0c8c-4197-9a2c-e6d8f7ad2a85",
+              "uuid": "e0575c31-40aa-4e4a-9f36-49e5ac4d7578",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Events List",
-              "sourceStep": "/api/3/workflow_steps/9599feca-49e9-4ff3-b70e-a010978e317d",
-              "targetStep": "/api/3/workflow_steps/217d870d-3dc0-4110-a8fa-8b6f68999ec3"
+              "sourceStep": "/api/3/workflow_steps/b7729a67-afda-4d1e-b40d-974cec9da517",
+              "targetStep": "/api/3/workflow_steps/5d2e0309-619b-4d08-86fc-80ee6c58b044"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "62d88cf3-b2c2-4441-9814-2e515119bbc5",
-          "collection": "/api/3/workflow_collections/a2147dd3-2cc4-4f96-8986-32000efc6c57",
+          "uuid": "d83c3240-5d18-4d99-9fa2-5512db53ccae",
+          "collection": "/api/3/workflow_collections/9f3e2809-d263-495d-aa66-80404cf0b839",
           "steps": [
             {
-              "uuid": "cc7ae797-5c67-4b7b-8ccd-81c248b78f97",
+              "uuid": "58bce1f3-f81f-4001-8a07-6838917f1d70",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -397,7 +538,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "fbc426cc-001a-4878-8bae-24b4b1ddbb93",
+              "uuid": "672816e2-bb76-439a-a357-19a1a8033794",
               "@type": "WorkflowStep",
               "name": "Get Event Details",
               "description": null,
@@ -434,16 +575,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/cc7ae797-5c67-4b7b-8ccd-81c248b78f97",
+          "triggerStep": "/api/3/workflow_steps/58bce1f3-f81f-4001-8a07-6838917f1d70",
           "routes": [
             {
-              "uuid": "2d9fa3d3-a7f1-44aa-8f92-64dd17fa86ff",
+              "uuid": "bc1b0f33-1424-42d1-a79a-0228919b68d2",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Event Details",
-              "sourceStep": "/api/3/workflow_steps/cc7ae797-5c67-4b7b-8ccd-81c248b78f97",
-              "targetStep": "/api/3/workflow_steps/fbc426cc-001a-4878-8bae-24b4b1ddbb93"
+              "sourceStep": "/api/3/workflow_steps/58bce1f3-f81f-4001-8a07-6838917f1d70",
+              "targetStep": "/api/3/workflow_steps/672816e2-bb76-439a-a357-19a1a8033794"
             }
           ]
         }

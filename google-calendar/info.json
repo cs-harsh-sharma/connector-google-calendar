@@ -245,6 +245,29 @@
       }
     },
     {
+      "operation": "delete_calendar_list",
+      "title": "Delete CalendarList",
+      "description": "Removes a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
+      "category": "investigation",
+      "annotation": "delete_calendar_list",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Calendar ID",
+          "name": "calendar_id",
+          "description": "Specify the ID of the calendar based on which you want to delete calendar details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "type": "text",
+          "visible": true,
+          "editable": true,
+          "required": true,
+          "tooltip": "Specify the ID of the calendar based on which you want to delete calendar details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword."
+        }
+      ],
+      "output_schema": {
+        "result": ""
+      }
+    },
+    {
       "operation": "get_calendar_access_control_list",
       "title": "Get Calendar Access Control List",
       "description": "Retrieves the rules in the access control list for the calendar from Google Calendar based on the calendar ID and other input parameters that you have specified.",
@@ -361,6 +384,39 @@
           "type": "",
           "value": ""
         }
+      }
+    },
+    {
+      "operation": "delete_access_control_rule",
+      "title": "Delete Access Control Rule",
+      "description": "Deletes an access control rule from Google Calendar based on the calendar ID and rule ID you have specified.",
+      "category": "investigation",
+      "annotation": "delete_access_control_rule",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Calendar ID",
+          "name": "calendar_id",
+          "description": "Specify the ID of the calendar based on which you want to delete access control rule details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "type": "text",
+          "visible": true,
+          "editable": true,
+          "required": true,
+          "tooltip": "Specify the ID of the calendar based on which you want to delete access control rule details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword."
+        },
+        {
+          "title": "Rule ID",
+          "name": "rule_id",
+          "description": "Specify the ID of the access control list (ACL) rule based on which you want to delete access control rule details from Google Calendar.",
+          "type": "text",
+          "visible": true,
+          "editable": true,
+          "required": true,
+          "tooltip": "Specify the ID of the access control list (ACL) rule based on which you want to delete access control rule details from Google Calendar."
+        }
+      ],
+      "output_schema": {
+        "result": ""
       }
     },
     {
