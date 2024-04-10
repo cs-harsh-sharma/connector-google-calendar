@@ -175,7 +175,7 @@
             {
               "uuid": "6f6bba94-1693-4c08-aa89-02779a341c38",
               "@type": "WorkflowStep",
-              "name": "Delete CalendarList",
+              "name": "Delete Calendar List",
               "description": null,
               "status": null,
               "arguments": {
@@ -187,7 +187,7 @@
                 "version": "1.0.0",
                 "connector": "google-calendar",
                 "operation": "delete_calendar_list",
-                "operationTitle": "Delete CalendarList"
+                "operationTitle": "Delete Calendar List"
               },
               "left": "188",
               "top": "120",
@@ -196,7 +196,7 @@
           ],
           "triggerLimit": null,
           "description": "Removes a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
-          "name": "Delete CalendarList",
+          "name": "Delete Calendar List",
           "tag": "#Google Calendar",
           "recordTags": [
             "Google",
@@ -214,7 +214,7 @@
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
-              "name": "Start-> Delete CalendarList",
+              "name": "Start-> Delete Calendar List",
               "sourceStep": "/api/3/workflow_steps/d1da1328-b555-4c20-a86e-09f506fda983",
               "targetStep": "/api/3/workflow_steps/6f6bba94-1693-4c08-aa89-02779a341c38"
             }

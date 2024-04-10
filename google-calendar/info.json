@@ -246,7 +246,7 @@
     },
     {
       "operation": "delete_calendar_list",
-      "title": "Delete CalendarList",
+      "title": "Delete Calendar List",
       "description": "Removes a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
       "category": "investigation",
       "annotation": "delete_calendar_list",
