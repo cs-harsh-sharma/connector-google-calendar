@@ -23,11 +23,6 @@ def api_request(method, endpoint, connector_info, config, params=None, data=None
         headers['Authorization'] = token
         headers['Content-Type'] = 'application/json'
         response = request(method, endpoint, headers=headers, params=params, data=data, verify=go.verify_ssl)
-        try:
-            from connectors.debug_utils.curl_script import make_curl
-            make_curl(method, endpoint, headers=headers, params=params, data=data, verify_ssl=go.verify_ssl)
-        except Exception as err:
-            logger.error(f"Error in curl utils: {str(err)}")
         if response.ok or response.status_code == 204:
             if 'json' in str(response.headers):
                 return response.json()
@@ -102,6 +97,17 @@ def get_calendar_list_details(config, params, connector_info):
         raise ConnectorError("{0}".format(str(err)))
 
 
+def delete_calendar_list(config, params, connector_info):
+    try:
+        url = 'calendar/{0}/users/me/calendarList/{1}'.format(CALENDARS_API_VERSION, params.get('calendar_id'))
+        response = api_request('DELETE', url, connector_info, config)
+        if response:
+            return {"result": "Successfully removed calendar list {0}".format(params.get('calendar_id'))}
+    except Exception as err:
+        logger.exception("{0}".format(str(err)))
+        raise ConnectorError("{0}".format(str(err)))
+
+
 def get_calendar_access_control_list(config, params, connector_info):
     try:
         url = 'calendar/{0}/calendars/{1}/acl'.format(CALENDARS_API_VERSION, params.pop('calendar_id'))
@@ -119,6 +125,21 @@ def get_access_control_rule_details(config, params, connector_info):
                                                           params.get('rule_id'))
         response = api_request('GET', url, connector_info, config)
         return response
+    except Exception as err:
+        logger.exception("{0}".format(str(err)))
+        raise ConnectorError("{0}".format(str(err)))
+
+
+def delete_access_control_rule(config, params, connector_info):
+    try:
+        url = 'calendar/{0}/calendars/{1}/acl/{2}'.format(CALENDARS_API_VERSION, params.get('calendar_id'),
+                                                          params.get('rule_id'))
+        response = api_request('DELETE', url, connector_info, config)
+        if response:
+            return {
+                "result": "Successfully removed access control rule {0} from calendar {1}".format(params.get('rule_id'),
+                                                                                                  params.get(
+                                                                                                      'calendar_id'))}
     except Exception as err:
         logger.exception("{0}".format(str(err)))
         raise ConnectorError("{0}".format(str(err)))
@@ -176,8 +197,10 @@ def _check_health(config, connector_info):
 operations = {
     'get_calendar_list': get_calendar_list,
     'get_calendar_list_details': get_calendar_list_details,
+    'delete_calendar_list': delete_calendar_list,
     'get_calendar_access_control_list': get_calendar_access_control_list,
     'get_access_control_rule_details': get_access_control_rule_details,
+    'delete_access_control_rule': delete_access_control_rule,
     'get_events_list': get_events_list,
     'get_event_details': get_event_details
 }
