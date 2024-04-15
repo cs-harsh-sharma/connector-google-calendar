@@ -89,7 +89,8 @@ def get_calendar_list(config, params, connector_info):
 
 def get_calendar_list_details(config, params, connector_info):
     try:
-        url = 'calendar/{0}/users/me/calendarList/{1}'.format(CALENDARS_API_VERSION, params.get('calendar_id'))
+        cal_id = params.get('calendar_id').replace("#", "%23")
+        url = 'calendar/{0}/users/me/calendarList/{1}'.format(CALENDARS_API_VERSION, cal_id)
         response = api_request('GET', url, connector_info, config)
         return response
     except Exception as err:
@@ -99,7 +100,8 @@ def get_calendar_list_details(config, params, connector_info):
 
 def delete_calendar_list(config, params, connector_info):
     try:
-        url = 'calendar/{0}/users/me/calendarList/{1}'.format(CALENDARS_API_VERSION, params.get('calendar_id'))
+        cal_id = params.get('calendar_id').replace("#", "%23")
+        url = 'calendar/{0}/users/me/calendarList/{1}'.format(CALENDARS_API_VERSION, cal_id)
         response = api_request('DELETE', url, connector_info, config)
         if response:
             return {"result": "Successfully removed calendar list {0}".format(params.get('calendar_id'))}
@@ -110,7 +112,8 @@ def delete_calendar_list(config, params, connector_info):
 
 def get_calendar_access_control_list(config, params, connector_info):
     try:
-        url = 'calendar/{0}/calendars/{1}/acl'.format(CALENDARS_API_VERSION, params.pop('calendar_id'))
+        cal_id = params.pop('calendar_id').replace("#", "%23")
+        url = 'calendar/{0}/calendars/{1}/acl'.format(CALENDARS_API_VERSION, cal_id)
         query_parameter = build_payload(params)
         response = api_request('GET', url, connector_info, config, params=query_parameter)
         return response
@@ -121,7 +124,8 @@ def get_calendar_access_control_list(config, params, connector_info):
 
 def get_access_control_rule_details(config, params, connector_info):
     try:
-        url = 'calendar/{0}/calendars/{1}/acl/{2}'.format(CALENDARS_API_VERSION, params.get('calendar_id'),
+        cal_id = params.get('calendar_id').replace("#", "%23")
+        url = 'calendar/{0}/calendars/{1}/acl/{2}'.format(CALENDARS_API_VERSION, cal_id,
                                                           params.get('rule_id'))
         response = api_request('GET', url, connector_info, config)
         return response
@@ -132,7 +136,8 @@ def get_access_control_rule_details(config, params, connector_info):
 
 def delete_access_control_rule(config, params, connector_info):
     try:
-        url = 'calendar/{0}/calendars/{1}/acl/{2}'.format(CALENDARS_API_VERSION, params.get('calendar_id'),
+        cal_id = params.get('calendar_id').replace("#", "%23")
+        url = 'calendar/{0}/calendars/{1}/acl/{2}'.format(CALENDARS_API_VERSION, cal_id,
                                                           params.get('rule_id'))
         response = api_request('DELETE', url, connector_info, config)
         if response:
@@ -147,7 +152,8 @@ def delete_access_control_rule(config, params, connector_info):
 
 def get_events_list(config, params, connector_info):
     try:
-        url = 'calendar/{0}/calendars/{1}/events'.format(CALENDARS_API_VERSION, params.get('calendar_id'))
+        cal_id = params.get('calendar_id').replace("#", "%23")
+        url = 'calendar/{0}/calendars/{1}/events'.format(CALENDARS_API_VERSION, cal_id)
         event_types_list = []
         event_types = params.get('eventTypes')
         if event_types:
@@ -176,7 +182,8 @@ def get_events_list(config, params, connector_info):
 
 def get_event_details(config, params, connector_info):
     try:
-        url = 'calendar/{0}/calendars/{1}/events/{2}'.format(CALENDARS_API_VERSION, params.pop('calendar_id'),
+        cal_id = params.pop('calendar_id').replace("#", "%23")
+        url = 'calendar/{0}/calendars/{1}/events/{2}'.format(CALENDARS_API_VERSION, cal_id,
                                                              params.pop('event_id'))
         query_parameter = build_payload(params)
         response = api_request('GET', url, connector_info, config, params=query_parameter)
@@ -188,7 +195,8 @@ def get_event_details(config, params, connector_info):
 
 def _check_health(config, connector_info):
     try:
-        return check(config, connector_info)
+        params = {}
+        return check(config, connector_info) and get_calendar_list(config, params, connector_info)
     except Exception as err:
         logger.exception("{0}".format(str(err)))
         raise ConnectorError("{0}".format(str(err)))
