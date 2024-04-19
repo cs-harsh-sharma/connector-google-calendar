@@ -80,7 +80,7 @@
   "operations": [
     {
       "operation": "get_calendar_list",
-      "title": "Get All CalendarList",
+      "title": "Get All Calendar List",
       "description": "Retrieves the calendars on the user's calendar list from Google Calendar based on the input parameters you have specified.",
       "category": "investigation",
       "annotation": "get_calendar_list",
@@ -89,14 +89,14 @@
         {
           "title": "Minimum Access Role",
           "name": "minAccessRole",
-          "description": "Specify the minimum access role for the user in the returned entries. The default is no restriction. You can choose from the following options: Free Busy Reader, Owner, Reader, or Writer.",
+          "description": "Specify the minimum access role for the user in the returned entries. The default is no restriction. You can choose from the following options: Free/Busy Reader, Owner, Reader, or Writer.",
           "type": "select",
           "visible": true,
           "editable": true,
           "required": false,
-          "tooltip": "Specify the minimum access role for the user in the returned entries. The default is no restriction. You can choose from the following options: Free Busy Reader, Owner, Reader, or Writer.",
+          "tooltip": "Specify the minimum access role for the user in the returned entries. The default is no restriction. You can choose from the following options: Free/Busy Reader, Owner, Reader, or Writer.",
           "options": [
-            "Free Busy Reader",
+            "Free/Busy Reader",
             "Owner",
             "Reader",
             "Writer"
@@ -136,24 +136,24 @@
           "tooltip": "Specify the maximum number of entries returned on one result page. By default the value is 100 entries. The page size can never be larger than 250 entries."
         },
         {
-          "title": "PageToken",
-          "description": "Specify a PageToken if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter that specifies a starting point to use for subsequent calls.",
+          "title": "Page Token",
+          "description": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls.",
           "required": false,
           "editable": true,
           "visible": true,
           "type": "text",
           "name": "pageToken",
-          "tooltip": "Specify a PageToken if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter that specifies a starting point to use for subsequent calls."
+          "tooltip": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls."
         },
         {
-          "title": "SyncToken",
-          "description": "Specify a SyncToken if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a SyncToken parameter that specifies a starting point to use for subsequent calls. Note: Minimum Access Role parameter cannot be specified together with SyncToken. By default, this is to return all entries.",
+          "title": "Sync Token",
+          "description": "Specify a Sync Token if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a Sync Token parameter that specifies a starting point to use for subsequent calls. Note: Minimum Access Role parameter cannot be specified together with Sync Token. By default, this is to return all entries.",
           "required": false,
           "editable": true,
           "visible": true,
           "type": "text",
           "name": "syncToken",
-          "tooltip": "Specify a SyncToken if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a SyncToken parameter that specifies a starting point to use for subsequent calls. Note: Minimum Access Role parameter cannot be specified together with SyncToken. By default, this is to return all entries."
+          "tooltip": "Specify a Sync Token if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a Sync Token parameter that specifies a starting point to use for subsequent calls. Note: Minimum Access Role parameter cannot be specified together with Sync Token. By default, this is to return all entries."
         }
       ],
       "output_schema": {
@@ -196,7 +196,7 @@
     },
     {
       "operation": "get_calendar_list_details",
-      "title": "Get CalendarList Details",
+      "title": "Get Calendar List Details",
       "description": "Retrieves a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
       "category": "investigation",
       "annotation": "get_calendar_list_details",
@@ -288,13 +288,13 @@
         {
           "title": "Include Deleted Access Control List (ACL)",
           "name": "showDeleted",
-          "description": "Whether to include deleted ACLs in the result. Deleted ACLs are represented by role equal to \"none\". Deleted ACLs will always be included if syncToken is provided. By default, this option is set as False.",
+          "description": "Whether to include deleted ACLs in the result. Deleted ACLs are represented by role equal to \"none\". Deleted ACLs will always be included if sync Token is provided. By default, this option is set as False.",
           "type": "checkbox",
           "visible": true,
           "editable": true,
           "required": false,
           "value": false,
-          "tooltip": "Whether to include deleted ACLs in the result. Deleted ACLs are represented by role equal to \"none\". Deleted ACLs will always be included if syncToken is provided. By default, this option is set as False."
+          "tooltip": "Whether to include deleted ACLs in the result. Deleted ACLs are represented by role equal to \"none\". Deleted ACLs will always be included if sync Token is provided. By default, this option is set as False."
         },
         {
           "title": "Maximum Results",
@@ -308,24 +308,24 @@
           "tooltip": "Specify the maximum number of entries returned on one result page. By default the value is 100 entries. The page size can never be larger than 250 entries."
         },
         {
-          "title": "PageToken",
-          "description": "Specify a PageToken if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter that specifies a starting point to use for subsequent calls.",
+          "title": "Page Token",
+          "description": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls.",
           "required": false,
           "editable": true,
           "visible": true,
           "type": "text",
           "name": "pageToken",
-          "tooltip": "Specify a PageToken if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter that specifies a starting point to use for subsequent calls."
+          "tooltip": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls."
         },
         {
-          "title": "SyncToken",
-          "description": "Specify a SyncToken if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a SyncToken parameter that specifies a starting point to use for subsequent calls. By default, this is to return all entries.",
+          "title": "Sync Token",
+          "description": "Specify a Sync Token if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a Sync Token parameter that specifies a starting point to use for subsequent calls. By default, this is to return all entries.",
           "required": false,
           "editable": true,
           "visible": true,
           "type": "text",
           "name": "syncToken",
-          "tooltip": "Specify a SyncToken if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a SyncToken parameter that specifies a starting point to use for subsequent calls. By default, this is to return all entries."
+          "tooltip": "Specify a Sync Token if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a Sync Token parameter that specifies a starting point to use for subsequent calls. By default, this is to return all entries."
         }
       ],
       "output_schema": {
@@ -516,14 +516,14 @@
           "tooltip": "Specify the maximum number of events returned on one result page. The number of events in the resulting page may be less than this value, or none at all, even if there are more events matching the query. By default the value is 250 entries. The page size can never be larger than 2500 events."
         },
         {
-          "title": "PageToken",
-          "description": "Specify a PageToken if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter that specifies a starting point to use for subsequent calls.",
+          "title": "Page Token",
+          "description": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls.",
           "required": false,
           "editable": true,
           "visible": true,
           "type": "text",
           "name": "pageToken",
-          "tooltip": "Specify a PageToken if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter that specifies a starting point to use for subsequent calls."
+          "tooltip": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls."
         },
         {
           "title": "Additional Fields",

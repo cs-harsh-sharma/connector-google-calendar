@@ -6,7 +6,7 @@ Copyright end
 """
 
 ACCESS_ROLE = {
-    'Free Busy Reader': 'freeBusyReader',
+    'Free/Busy Reader': 'freeBusyReader',
     'Owner': 'owner',
     'Reader': 'reader',
     'Writer': 'writer'
