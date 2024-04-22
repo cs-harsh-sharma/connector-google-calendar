@@ -55,7 +55,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves the calendars on the user's calendar list from Google Calendar based on the input parameters you have specified.",
+          "description": "Retrieves all calendars from the user's Google Calendar based on the access role, pagination, and other input parameters you have specified. ",
           "name": "Get All Calendar List",
           "tag": "#Google Calendar",
           "recordTags": [
@@ -125,7 +125,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
+          "description": "Retrieves a calendar's details from the user's Google Calendar based on the calendar ID you have specified. ",
           "name": "Get Calendar List Details",
           "tag": "#Google Calendar",
           "recordTags": [
@@ -195,7 +195,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Removes a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
+          "description": "Removes a calendar from the user's Google Calendar list based on the calendar ID you have specified. ",
           "name": "Delete Calendar List",
           "tag": "#Google Calendar",
           "recordTags": [
@@ -269,7 +269,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves the rules in the access control list for the calendar from Google Calendar based on the calendar ID and other input parameters that you have specified.",
+          "description": "Retrieves a calendar's access control list from Google Calendar based on the calendar ID, pagination, and other input parameters that you have specified. ",
           "name": "Get Calendar Access Control List",
           "tag": "#Google Calendar",
           "recordTags": [
@@ -340,7 +340,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves an access control rule from Google Calendar based on the calendar ID and rule ID you have specified.",
+          "description": "Retrieves a calendar's access control list details from Google Calendar based on the calendar and rule ID you have specified. ",
           "name": "Get Access Control Rule Details",
           "tag": "#Google Calendar",
           "recordTags": [
@@ -411,7 +411,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Deletes an access control rule from Google Calendar based on the calendar ID and rule ID you have specified.",
+          "description": "Deletes a calendar's access control list from Google Calendar based on the calendar ID and rule ID that you have specified. ",
           "name": "Delete Access Control Rule",
           "tag": "#Google Calendar",
           "recordTags": [
@@ -490,7 +490,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves the list of events on the specified calendar from Google Calendar based on the calendar ID and other input parameters you have specified.",
+          "description": "Retrieves a calendar's list of events from Google Calendar based on the calendar ID, event types, and other input parameters you have specified. ",
           "name": "Get Events List",
           "tag": "#Google Calendar",
           "recordTags": [
@@ -563,7 +563,7 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves an event details based on the calendar ID, event ID and other input parameters that you have specified.",
+          "description": "Retrieves a calendar's event details from Google Calendar based on the calendar ID, event ID, and other input parameters that you have specified. ",
           "name": "Get Event Details",
           "tag": "#Google Calendar",
           "recordTags": [

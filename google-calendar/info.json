@@ -9,7 +9,7 @@
   "category": "Utilities",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
-  "help_online": "",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/google-calendar/836/google-calendar-v1-0-0",
   "configuration": {
     "fields": [
       {
@@ -81,7 +81,7 @@
     {
       "operation": "get_calendar_list",
       "title": "Get All Calendar List",
-      "description": "Retrieves the calendars on the user's calendar list from Google Calendar based on the input parameters you have specified.",
+      "description": "Retrieves all calendars from the user's Google Calendar based on the access role, pagination, and other input parameters you have specified. ",
       "category": "investigation",
       "annotation": "get_calendar_list",
       "enabled": true,
@@ -89,12 +89,12 @@
         {
           "title": "Minimum Access Role",
           "name": "minAccessRole",
-          "description": "Specify the minimum access role for the user in the returned entries. The default is no restriction. You can choose from the following options: Free/Busy Reader, Owner, Reader, or Writer.",
+          "description": "(Optional) Select the minimum access role for the user in the returned entries. You can choose from the following options:  \n\nFree/Busy Reader \n\nOwner \n\nReader \n\nWriter",
           "type": "select",
           "visible": true,
           "editable": true,
           "required": false,
-          "tooltip": "Specify the minimum access role for the user in the returned entries. The default is no restriction. You can choose from the following options: Free/Busy Reader, Owner, Reader, or Writer.",
+          "tooltip": "(Optional) Select the minimum access role for the user in the returned entries.",
           "options": [
             "Free/Busy Reader",
             "Owner",
@@ -105,7 +105,7 @@
         {
           "title": "Include Deleted Calendar",
           "name": "showDeleted",
-          "description": "Whether to include deleted calendar list entries in the result. By default, this option is set as False.",
+          "description": "(Optional) Select to include deleted calendar list entries in the result. By default, this option is cleared, i.e., set to false. ",
           "type": "checkbox",
           "visible": true,
           "editable": true,
@@ -116,7 +116,7 @@
         {
           "title": "Show Hidden Calendar",
           "name": "showHidden",
-          "description": "Whether to show hidden entries. By default, this option is set as False.",
+          "description": "(Optional) Select to show hidden entries. By default, this option is cleared, i.e., set to false. ",
           "type": "checkbox",
           "visible": true,
           "editable": true,
@@ -127,7 +127,7 @@
         {
           "title": "Maximum Results",
           "name": "maxResults",
-          "description": "Specify the maximum number of entries returned on one result page. By default the value is 100 entries. The page size can never be larger than 250 entries.",
+          "description": "(Optional) Specify the maximum number of entries returned on one page. The default value is 100 and the maximum value is 250. ",
           "type": "integer",
           "visible": true,
           "editable": true,
@@ -137,7 +137,7 @@
         },
         {
           "title": "Page Token",
-          "description": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls.",
+          "description": "(Optional) Specify a page token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter specifying a starting point to use for subsequent calls. ",
           "required": false,
           "editable": true,
           "visible": true,
@@ -147,7 +147,7 @@
         },
         {
           "title": "Sync Token",
-          "description": "Specify a Sync Token if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a Sync Token parameter that specifies a starting point to use for subsequent calls. Note: Minimum Access Role parameter cannot be specified together with Sync Token. By default, this is to return all entries.",
+          "description": "(Optional) Specify a sync token if a previous operation returned a partial result. If the previous response contains a element, the value of the element includes a SyncToken parameter that specifies a starting point to use for subsequent calls.  \n\nNOTE: Minimum Access Role parameter cannot be specified together with SyncToken. By default, this is to return all entries. ",
           "required": false,
           "editable": true,
           "visible": true,
@@ -197,7 +197,7 @@
     {
       "operation": "get_calendar_list_details",
       "title": "Get Calendar List Details",
-      "description": "Retrieves a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
+      "description": "Retrieves a calendar's details from the user's Google Calendar based on the calendar ID you have specified. ",
       "category": "investigation",
       "annotation": "get_calendar_list_details",
       "enabled": true,
@@ -205,7 +205,7 @@
         {
           "title": "Calendar ID",
           "name": "calendar_id",
-          "description": "Specify the ID of the calendar based on which you want to retrieve calendar details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "description": "Specify the ID of the calendar whose details you want to retrieve from Google Calendar.  \n\nNOTE: If you want to access the primary calendar of the currently logged in user, use the primary keyword. ",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -247,7 +247,7 @@
     {
       "operation": "delete_calendar_list",
       "title": "Delete Calendar List",
-      "description": "Removes a calendar from the user's calendar list from Google Calendar based on the calendar ID you have specified.",
+      "description": "Removes a calendar from the user's Google Calendar list based on the calendar ID you have specified. ",
       "category": "investigation",
       "annotation": "delete_calendar_list",
       "enabled": true,
@@ -255,7 +255,7 @@
         {
           "title": "Calendar ID",
           "name": "calendar_id",
-          "description": "Specify the ID of the calendar based on which you want to delete calendar details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "description": "Specify the ID of the calendar to delete from Google Calendar.  \n\nNOTE: If you want to access the primary calendar of the currently logged in user, use the primary keyword.",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -270,7 +270,7 @@
     {
       "operation": "get_calendar_access_control_list",
       "title": "Get Calendar Access Control List",
-      "description": "Retrieves the rules in the access control list for the calendar from Google Calendar based on the calendar ID and other input parameters that you have specified.",
+      "description": "Retrieves a calendar's access control list from Google Calendar based on the calendar ID, pagination, and other input parameters that you have specified. ",
       "category": "investigation",
       "annotation": "get_calendar_access_control_list",
       "enabled": true,
@@ -278,7 +278,7 @@
         {
           "title": "Calendar ID",
           "name": "calendar_id",
-          "description": "Specify the ID of the calendar based on which you want to retrieve rules in the access control list from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "description": "Specify the ID of the calendar whose access control list rules you want to retrieve from Google Calendar.  \n\nNOTE: If you want to access the primary calendar of the currently logged in user, use the primary keyword. ",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -288,7 +288,7 @@
         {
           "title": "Include Deleted Access Control List (ACL)",
           "name": "showDeleted",
-          "description": "Whether to include deleted ACLs in the result. Deleted ACLs are represented by role equal to \"none\". Deleted ACLs will always be included if sync Token is provided. By default, this option is set as False.",
+          "description": "(Optional) Select to include deleted ACLs in the result. Deleted ACLs are represented by role equal to \"none\". Deleted ACLs are always included if syncToken is provided. By default, this option is cleared, i.e., set to false. ",
           "type": "checkbox",
           "visible": true,
           "editable": true,
@@ -299,7 +299,7 @@
         {
           "title": "Maximum Results",
           "name": "maxResults",
-          "description": "Specify the maximum number of entries returned on one result page. By default the value is 100 entries. The page size can never be larger than 250 entries.",
+          "description": "(Optional) Specify the maximum number of entries returned on one page. The default value is 100 and the maximum value is 250. ",
           "type": "integer",
           "visible": true,
           "editable": true,
@@ -309,7 +309,7 @@
         },
         {
           "title": "Page Token",
-          "description": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls.",
+          "description": "(Optional) Specify a page token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter specifying a starting point to use for subsequent calls. ",
           "required": false,
           "editable": true,
           "visible": true,
@@ -319,7 +319,7 @@
         },
         {
           "title": "Sync Token",
-          "description": "Specify a Sync Token if a previous operation returned a partial result. If the previous response contains a nextSyncToken element, the value of the nextSyncToken element includes a Sync Token parameter that specifies a starting point to use for subsequent calls. By default, this is to return all entries.",
+          "description": "(Optional) Specify a sync token if a previous operation returned a partial result. If the previous response contains a element, the value of the element includes a SyncToken parameter that specifies a starting point to use for subsequent calls. ",
           "required": false,
           "editable": true,
           "visible": true,
@@ -349,7 +349,7 @@
     {
       "operation": "get_access_control_rule_details",
       "title": "Get Access Control Rule Details",
-      "description": "Retrieves an access control rule from Google Calendar based on the calendar ID and rule ID you have specified.",
+      "description": "Retrieves a calendar's access control list details from Google Calendar based on the calendar and rule ID you have specified. ",
       "category": "investigation",
       "annotation": "get_access_control_rule_details",
       "enabled": true,
@@ -357,7 +357,7 @@
         {
           "title": "Calendar ID",
           "name": "calendar_id",
-          "description": "Specify the ID of the calendar based on which you want to retrieve access control rule details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "description": "Specify the ID of the calendar based on which you want to retrieve access control rule details from Google Calendar.  \n\nNOTE: If you want to access the primary calendar of the currently logged in user, use the primary keyword. ",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -367,7 +367,7 @@
         {
           "title": "Rule ID",
           "name": "rule_id",
-          "description": "Specify the ID of the access control list (ACL) rule based on which you want to retrieve access control rule details from Google Calendar.",
+          "description": "Specify the ID of the access control list (ACL) rule based on which you want to retrieve access control rule details from Google Calendar. ",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -389,7 +389,7 @@
     {
       "operation": "delete_access_control_rule",
       "title": "Delete Access Control Rule",
-      "description": "Deletes an access control rule from Google Calendar based on the calendar ID and rule ID you have specified.",
+      "description": "Deletes a calendar's access control list from Google Calendar based on the calendar ID and rule ID that you have specified. ",
       "category": "investigation",
       "annotation": "delete_access_control_rule",
       "enabled": true,
@@ -397,7 +397,7 @@
         {
           "title": "Calendar ID",
           "name": "calendar_id",
-          "description": "Specify the ID of the calendar based on which you want to delete access control rule details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "description": "Specify the ID of the calendar whose access control list rule you want to delete from Google Calendar.  \n\nNOTE: If you want to access the primary calendar of the currently logged in user, use the primary keyword.",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -407,7 +407,7 @@
         {
           "title": "Rule ID",
           "name": "rule_id",
-          "description": "Specify the ID of the access control list (ACL) rule based on which you want to delete access control rule details from Google Calendar.",
+          "description": "Specify the ID of the access control list (ACL) rule you want to delete from Google Calendar. ",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -422,7 +422,7 @@
     {
       "operation": "get_events_list",
       "title": "Get Events List",
-      "description": "Retrieves the list of events on the specified calendar from Google Calendar based on the calendar ID and other input parameters you have specified.",
+      "description": "Retrieves a calendar's list of events from Google Calendar based on the calendar ID, event types, and other input parameters you have specified. ",
       "category": "investigation",
       "annotation": "get_events_list",
       "enabled": true,
@@ -430,7 +430,7 @@
         {
           "title": "Calendar ID",
           "name": "calendar_id",
-          "description": "Specify the ID of the calendar based on which you want to retrieve events from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "description": "Specify the ID of the calendar whose events you want to retrieve from Google Calendar.  \n\nNOTE: If you want to access the primary calendar of the currently logged in user, use the primary keyword. ",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -440,7 +440,7 @@
         {
           "title": "Event Types",
           "name": "eventTypes",
-          "description": "Select the multiple event types to return. You can choose from the following options: Default, Focus Time, Out of Office, or Working Location.",
+          "description": "(Optional) Select the event types to return. You can choose one or more from the following options:  \n\nDefault \n\nFocus Time \n\nOut of Office \n\nWorking Location ",
           "type": "multiselect",
           "visible": true,
           "editable": true,
@@ -455,7 +455,7 @@
         },
         {
           "title": "Created After",
-          "description": "Specify the Datetime using which you want to filter the result set to only include only those items that have been created after the specified timestamp.",
+          "description": "(Optional) Specify the start date and time of the range to filter the result set to include only those items that have been created after the specified timestamp. ",
           "required": false,
           "editable": true,
           "visible": true,
@@ -465,7 +465,7 @@
         },
         {
           "title": "Created Before",
-          "description": "Specify the Datetime using which you want to filter the result set to only include only those items that have been created before the specified timestamp.",
+          "description": "(Optional) Specify the end date and time of the range to filter the result set to include only those items that have been created before the specified timestamp. ",
           "required": false,
           "editable": true,
           "visible": true,
@@ -475,7 +475,7 @@
         },
         {
           "title": "Last Modification Time",
-          "description": "Specify the Datetime using which you want to filter the result set to only include only those items that have been last modified by the specified timestamp.",
+          "description": "(Optional) Specify the date and time to filter the result set to include only those items that have been modified at the specified timestamp. ",
           "required": false,
           "editable": true,
           "visible": true,
@@ -486,7 +486,7 @@
         {
           "title": "Order By",
           "name": "orderBy",
-          "description": "Specify the order of the events returned in the result from Google Calendar. Acceptable values are: startTime or updated.",
+          "description": "(Optional) Specify the order criteria of the events returned in the result set from Google Calendar. Acceptable values are: startTime or updated. ",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -497,7 +497,7 @@
         {
           "title": "Maximum Attendees",
           "name": "maxAttendees",
-          "description": "Specify the maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned.",
+          "description": "(Optional) Specify the maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. ",
           "type": "integer",
           "visible": true,
           "editable": true,
@@ -507,7 +507,7 @@
         {
           "title": "Maximum Results",
           "name": "maxResults",
-          "description": "Specify the maximum number of events returned on one result page. The number of events in the resulting page may be less than this value, or none at all, even if there are more events matching the query. By default the value is 250 entries. The page size can never be larger than 2500 events.",
+          "description": "(Optional) Specify the maximum number of entries returned on one page. The default value is 100 and the maximum value is 250. ",
           "type": "integer",
           "visible": true,
           "editable": true,
@@ -517,7 +517,7 @@
         },
         {
           "title": "Page Token",
-          "description": "Specify a Page Token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a Page Token parameter that specifies a starting point to use for subsequent calls.",
+          "description": "(Optional) Specify a page token if a previous operation returned a partial result. If the previous response contains a nextPageToken element, the value of the nextPageToken element includes a PageToken parameter specifying a starting point to use for subsequent calls. ",
           "required": false,
           "editable": true,
           "visible": true,
@@ -533,7 +533,7 @@
           "editable": true,
           "visible": true,
           "tooltip": "Additional fields, in the JSON format, based on which you want to retrieve events from Google Calendar.",
-          "description": "Additional fields, in the JSON format, based on which you want to retrieve events from Google Calendar."
+          "description": "(Optional) Specify additional fields, in JSON format, based on which to retrieve events from Google Calendar. For information on supported additional fields, refer https://developers.google.com/calendar/api/v3/reference/events. "
         }
       ],
       "output_schema": {
@@ -607,7 +607,7 @@
     {
       "operation": "get_event_details",
       "title": "Get Event Details",
-      "description": "Retrieves an event details based on the calendar ID, event ID and other input parameters that you have specified.",
+      "description": "Retrieves a calendar's event details from Google Calendar based on the calendar ID, event ID, and other input parameters that you have specified. ",
       "category": "investigation",
       "annotation": "get_event_details",
       "enabled": true,
@@ -615,7 +615,7 @@
         {
           "title": "Calendar ID",
           "name": "calendar_id",
-          "description": "Specify the ID of the calendar based on which you want to retrieve event details from Google Calendar. Note: If you want to access the primary calendar of the currently logged in user, use the \"primary\" keyword.",
+          "description": "Specify the ID of the calendar whose event details to retrieve from Google Calendar.  \n\nNOTE: If you want to access the primary calendar of the currently logged in user, use the primary keyword.",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -625,7 +625,7 @@
         {
           "title": "Event ID",
           "name": "event_id",
-          "description": "Specify the ID of the event whose details you want to retrieve from Google Calendar.",
+          "description": "Specify the ID of the event whose details to retrieve from Google Calendar. ",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -635,7 +635,7 @@
         {
           "title": "Maximum Attendees",
           "name": "maxAttendees",
-          "description": "Specify the maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned.",
+          "description": "(Optional) Specify the maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. ",
           "type": "integer",
           "visible": true,
           "editable": true,
@@ -645,7 +645,7 @@
         {
           "title": "TimeZone",
           "name": "timeZone",
-          "description": "Specify the time zone used in the response. The default is the time zone of the calendar.",
+          "description": "(Optional) Specify the time zone used in the response. Default value is the time zone of the calendar. ",
           "type": "text",
           "visible": true,
           "editable": true,
